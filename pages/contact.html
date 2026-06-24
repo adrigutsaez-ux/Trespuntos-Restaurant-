@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a Tres Puntos - Cocina Puertorriqueña Contemporánea">
+    <title>Contacto | Tres Puntos - Cocina Puertorriqueña Contemporánea</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/accessibility.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+        }
+
+        .info-item p {
+            margin: 0.5rem 0;
+        }
+
+        .info-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .info-item a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover,
+        .submit-btn:focus {
+            background-color: #e5c158;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <h1 class="logo">TRES PUNTOS</h1>
+                    <p class="tagline">Cocina Puertorriqueña Contemporánea</p>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li><a href="menu.html" class="nav-link">Menú</a></li>
+                <li><a href="about.html" class="nav-link">Nosotros</a></li>
+                <li><a href="reservations.html" class="nav-link">Reservaciones</a></li>
+                <li><a href="contact.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main id="main-content">
+        <section class="menu-hero" role="region" aria-label="Sección de contacto">
+            <div class="container">
+                <h1>Contacta Con Nosotros</h1>
+                <p>Nos encantaría saber de ti</p>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="info-item">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+17871234567">+1 (787) 123-4567</a></p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@trespuntos.pr">info@trespuntos.pr</a></p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Dirección</h4>
+                            <p>Calle Principal 123<br>
+                            San Juan, Puerto Rico 00901<br>
+                            <a href="#">Ver en Google Maps</a></p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Horario</h4>
+                            <p>
+                                <strong>Lunes:</strong> Cerrado<br>
+                                <strong>Martes - Jueves:</strong> 5:00 PM - 11:00 PM<br>
+                                <strong>Viernes - Sábado:</strong> 5:00 PM - 12:00 AM<br>
+                                <strong>Domingo:</strong> Cerrado
+                            </p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Síguenos</h4>
+                            <p>
+                                <a href="#">Facebook</a> | 
+                                <a href="#">Instagram</a> | 
+                                <a href="#">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="contactForm" aria-label="Formulario de contacto">
+                            <div class="form-group">
+                                <label for="name">Nombre *</label>
+                                <input type="text" id="name" name="name" required aria-required="true" placeholder="Tu nombre">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="tu@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <input type="text" id="subject" name="subject" required aria-required="true" placeholder="¿En qué podemos ayudarte?">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" required aria-required="true" rows="5" placeholder="Tu mensaje aquí..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Tres Puntos</h4>
+                    <p>Cocina Puertorriqueña Contemporánea</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horario</h4>
+                    <p>Mar - Jue: 5:00 PM - 11:00 PM<br>
+                    Vie - Sab: 5:00 PM - 12:00 AM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tres Puntos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js" defer></script>
+    <script src="../js/accessibility.js" defer></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
