@@ -1,0 +1,230 @@
+/* ==========================================
+   ACCESSIBILITY STYLES
+   WCAG 2.1 AA Compliant
+   ========================================== */
+
+/* Skip to Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 100;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus Visible */
+:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+    :root {
+        --primary-color: #000000;
+        --light-bg: #ffffff;
+        --text-dark: #000000;
+        --text-light: #ffffff;
+        --border-color: #000000;
+    }
+    
+    .hero {
+        background: #000000;
+        border: 2px solid #000000;
+    }
+    
+    .btn {
+        border-width: 3px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-bg: #1a1a1a;
+        --text-dark: #e0e0e0;
+    }
+    
+    body {
+        background-color: var(--light-bg);
+        color: var(--text-dark);
+    }
+    
+    .dish-card {
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+    }
+    
+    .dish-card h3 {
+        color: var(--secondary-color);
+    }
+    
+    .dish-card p {
+        color: #bbb;
+    }
+}
+
+/* Text Size Adjustment */
+@supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    body {
+        font-size: clamp(1rem, 1.2vw, 1.25rem);
+    }
+}
+
+/* Zoom Support */
+body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Semantic HTML Enhancement */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+/* Form Accessibility */
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Keyboard Navigation */
+button,
+a,
+input[type="button"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+/* ARIA Live Region Styles */
+[role="alert"],
+[role="status"] {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border-left: 4px solid var(--secondary-color);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Loading Spinner Accessibility */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(212, 175, 55, 0.2);
+    border-top-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Tooltip Accessibility */
+[role="tooltip"] {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    position: absolute;
+}
+
+/* Link Underlines */
+a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+a:focus,
+a:hover {
+    text-decoration-thickness: 3px;
+}
